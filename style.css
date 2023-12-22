@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 1px solid black;
+}
+
+#placementGrid,
+#enemyGrid {
+	width: 300px;
+	aspect-ratio: 1;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(10, 1fr);
+}
+
+.shadow {
+	background-color: black;
+	opacity: 0.5;
+}
+
+.boat {
+	background-color: black;
+	color: white;
+}
+
+.maps {
+	justify-content: center;
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+#buttons {
+	display: flex;
+	justify-content: center;
+}
