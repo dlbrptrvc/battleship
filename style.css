@@ -1,17 +1,52 @@
+@font-face {
+	font-family: header;
+	src: url('./fonts/header.TTF');
+}
+
+@font-face {
+	font-family: x;
+	src: url('./fonts/x.otf');
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	border: 1px solid black;
+}
+
+body {
+	height: 100vh;
+}
+
+.header {
+	text-align: center;
+	font-family: header;
+	font-size: 10vw;
+	container-type: inline-size;
+}
+
+@media (min-width: 1000px) {
+	.header {
+		font-size: 120px;
+	}
 }
 
 #placementGrid,
 #enemyGrid {
+	border: 1px solid black;
 	width: 300px;
 	aspect-ratio: 1;
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	grid-template-rows: repeat(10, 1fr);
+}
+
+.field {
+	border: 1px solid black;
+	font-family: x;
+	font-size: 20px;
+	text-align: center;
+	overflow: hidden;
 }
 
 .shadow {
@@ -34,4 +69,27 @@
 #buttons {
 	display: flex;
 	justify-content: center;
+	gap: 50px;
+	margin-bottom: 20px;
+}
+
+#rotateBtn,
+#startBtn {
+	text-align: center;
+	user-select: none;
+	width: 100px;
+	border: 1px solid black;
+}
+
+#rotateBtn:hover,
+#rotateBtn:active,
+#startBtn:hover,
+#startBtn:active {
+	background-color: black;
+	color: white;
+}
+
+#info {
+	text-align: center;
+	margin-top: 10px;
 }

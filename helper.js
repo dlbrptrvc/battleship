@@ -10,3 +10,13 @@ function generateCoverGrid() {
 	}
 	return ret;
 }
+
+function getNeighbors(xy) {
+	let ret = new Set();
+	for (let i = -1; i < 2; i++) {
+		for (let j = -1; j < 2; j++) {
+			ret.add(+xy.split(',')[0] + i + ',' + (+xy.split(',')[1] + j));
+		}
+	}
+	return ret;
+}
